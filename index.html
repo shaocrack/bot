@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainTitle">ESCANER</h1>
+        <p>Ingresa tu nombre :</p>
+        <br>
+        <input type="text" id="nameInput" placeholder="Tu nombre" />
+        <button id="surpriseBtn">¡Sorpresa!</button>
+        <div id="personalMessage" class="message hidden"></div>
+        <div id="scanText" class="scan-text hidden"></div>
+        <div id="progressBar" class="progress hidden">
+            <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <!-- Audio de cumpleaños (agrega tu archivo song.mp3 en la carpeta) -->
+        <audio id="birthdaySong" src="jj.mp3"></audio>
+
+        <!-- Contenedor para las cartas de mensajes -->
+        <div id="cardsContainer" class="cards-container"></div>
+    </div>
+
+    <!-- Decorativo: globos -->
+    <div class="balloons">
+        <div class="balloon" style="--clr:#ff5f96; --left:10%;"></div>
+        <div class="balloon" style="--clr:#ffd93d; --left:25%; --size:110px;"></div>
+        <div class="balloon" style="--clr:#3ec1d3; --left:40%;"></div>
+        <div class="balloon" style="--clr:#ff9a3c; --left:60%; --size:90px;"></div>
+        <div class="balloon" style="--clr:#52b788; --left:80%;"></div>
+    </div>
+</body>
+</html>
