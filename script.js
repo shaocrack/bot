@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mensajes para las cartas
 const cardsTexts = [
   'Hola, MB ',
-  'En este día tan especial quiero dedicarte unas palabras:',
+  'En este día tan especial quiero dedicarte unas palabras de la manera que se me da mejor PROGRAMANDO XD:',
   '¡Feliz cumpleaños! ',
   'Que cada sueño que guardas en tu corazón encuentre el camino para hacerse realidad.',
   'Nunca dejes de luchar por lo que deseas, ni permitas que las dificultades apaguen tu luz.',
@@ -64,7 +64,7 @@ const cardsTexts = [
 
       if (percent === 75) {
         clearInterval(interval);
-        scanText.textContent = 'Es el nombre de una bandida ';
+        scanText.textContent = 'Es el nombre de una bandida :V ';
         setTimeout(() => {
           resumeScan();
         }, 2000);
@@ -90,7 +90,7 @@ const cardsTexts = [
   }
 
   function finishScan(name) {
-    scanText.textContent = 'Ah mira es tu cumpleaños, según mi base de datos ';
+    scanText.textContent = 'Ah mira es tu cumpleaños, según mi base de datos :O ';
     setTimeout(() => {
       // Ocultar contenedor de escáner completo
       document.getElementById('scannerContainer').classList.add('hidden');
