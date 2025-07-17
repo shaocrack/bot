@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>¡Feliz Cumpleaños!</title>
+    <title>¡Escaner!</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Confetti library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
@@ -19,6 +19,7 @@
         <div id="personalMessage" class="message hidden"></div>
         <div id="scanText" class="scan-text hidden"></div>
         <div id="progressBar" class="progress hidden">
+            <span id="progressPercent" class="progress-percent">0%</span>
             <div id="progressFill" class="progress-fill"></div>
         </div>
         <!-- Audio de cumpleaños (agrega tu archivo song.mp3 en la carpeta) -->
@@ -29,7 +30,7 @@
     </div>
 
     <!-- Decorativo: globos -->
-    <div class="balloons">
+    <div class="balloons hidden">
         <div class="balloon" style="--clr:#ff5f96; --left:10%;"></div>
         <div class="balloon" style="--clr:#ffd93d; --left:25%; --size:110px;"></div>
         <div class="balloon" style="--clr:#3ec1d3; --left:40%;"></div>

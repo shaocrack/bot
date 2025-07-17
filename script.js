@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const song = document.getElementById('birthdaySong');
   const progressBar = document.getElementById('progressBar');
   const progressFill = document.getElementById('progressFill');
+  const progressPercent = document.getElementById('progressPercent');
+  const balloons = document.querySelector('.balloons');
   const scanText = document.getElementById('scanText');
   const cardsContainer = document.getElementById('cardsContainer');
 
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.disabled = true;
 
     const updateText = (p) => {
+      progressPercent.textContent = p + '%';
       if (p < 20) scanText.textContent = 'Espera un momento...';
       else if (p < 60) scanText.textContent = 'Estoy escaneando tu bello nombre';
     };
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(interval);
         finishScan(name);
       }
-    }, 50);
+    }, 120);
 
     function resumeScan() {
       const interval2 = setInterval(() => {
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
           clearInterval(interval2);
           finishScan(name);
         }
-      }, 40);
+      }, 100);
     }
   }
 
@@ -88,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
       messageDiv.classList.remove('hidden');
 
       // Disparar celebraciones
+      // Mostrar globos
+      balloons.classList.remove('hidden');
       triggerCelebration();
     }, 2000);
   }

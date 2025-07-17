@@ -71,6 +71,16 @@ button:hover {
   overflow: hidden;
 }
 
+.progress-percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #333;
+  pointer-events: none;
+}
+
 .progress-fill {
   height: 100%;
   width: 0;
@@ -96,6 +106,7 @@ button:hover {
 }
 
 .card {
+  z-index: 20;
   position: absolute;
   background: #fffdfd;
   padding: 1.5rem 2rem;
@@ -115,6 +126,7 @@ button:hover {
 
 /* Globos animados */
 .balloons {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
