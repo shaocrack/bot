@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function finishScan(name) {
-    scanText.textContent = 'Ah mira es tu cumpleaños, según mi base de datos 🎂';
+    scanText.textContent = 'Ah mira es tu cumpleaños, según mi base de datos ';
     setTimeout(() => {
-      // Ocultar sección de entrada
-      input.parentElement.classList.add('hidden');
+      // Ocultar contenedor de escáner completo
+      document.getElementById('scannerContainer').classList.add('hidden');
       progressBar.classList.add('hidden');
       scanText.classList.add('hidden');
 
@@ -110,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
       song.play();
     }
 
-    // Mostrar secuencia de cartas
+    // Mostrar contenedor de cartas y secuencia
+    cardsContainer.classList.remove('hidden');
     showCardsSequence();
 
     btn.disabled = false;
@@ -136,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       void card.offsetWidth;
       card.classList.add('show');
 
-      // Ocultar después de 3s
+      // Ocultar después de 5s
       setTimeout(() => {
         card.classList.remove('show');
         setTimeout(() => {
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           index++;
           showNextCard();
         }, 600); // esperar transición de salida
-      }, 3000);
+      }, 5000);
     };
 
     showNextCard();

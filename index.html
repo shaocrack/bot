@@ -10,7 +10,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
+        <div id="scannerContainer" class="container">
         <h1 id="mainTitle">ESCANER</h1>
         <p>Ingresa tu nombre :</p>
         <br>
@@ -25,8 +26,10 @@
         <!-- Audio de cumpleaños (agrega tu archivo song.mp3 en la carpeta) -->
         <audio id="birthdaySong" src="jj.mp3"></audio>
 
-        <!-- Contenedor para las cartas de mensajes -->
-        <div id="cardsContainer" class="cards-container"></div>
+
+        </div>
+
+        <div id="cardsContainer" class="cards-container hidden"></div>
     </div>
 
     <!-- Decorativo: globos -->
