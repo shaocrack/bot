@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mensajes para las cartas
 const cardsTexts = [
   'Hola, MB ',
-  'En este día tan especial quiero dedicarte unas palabras desde el corazón:',
+  'En este día tan especial quiero dedicarte unas palabras:',
   '¡Feliz cumpleaños! ',
   'Que cada sueño que guardas en tu corazón encuentre el camino para hacerse realidad.',
   'Nunca dejes de luchar por lo que deseas, ni permitas que las dificultades apaguen tu luz.',
@@ -139,7 +139,10 @@ const cardsTexts = [
     };
 
     const showNextCard = () => {
-      if (index >= cardsTexts.length) return;
+      if (index >= cardsTexts.length) {
+        showVideoCard();
+        return;
+      }
 
       const card = createCard(cardsTexts[index]);
       cardsContainer.appendChild(card);
@@ -160,6 +163,48 @@ const cardsTexts = [
     };
 
     showNextCard();
+
+    // --- Video y mensajes adicionales ---
+    function showVideoCard() {
+      cardsContainer.innerHTML = '';
+      const videoWrapper = document.createElement('div');
+      videoWrapper.style.width = '100%';
+      videoWrapper.style.display = 'flex';
+      videoWrapper.style.flexDirection = 'column';
+      videoWrapper.style.alignItems = 'center';
+      videoWrapper.style.gap = '1rem';
+
+      const rememberP = document.createElement('p');
+      rememberP.className = 'card show';
+      rememberP.textContent = 'Me olvidaba';
+
+      const video = document.createElement('video');
+      video.src = 'cua.mp4';
+      video.controls = true;
+      video.autoplay = true;
+      video.style.maxWidth = '70%';
+      video.style.borderRadius = '10px';
+      video.style.boxShadow = '0 4px 15px rgba(0,0,0,0.15)';
+
+      const msgP = document.createElement('p');
+      msgP.className = 'card show';
+      msgP.innerHTML = 'De tantas fotos y videos<br><br>esta es la mejor<br><br>¡Vuélvete millonaria para que pagues el pasaje de todos!';
+
+      const finalP = document.createElement('p');
+      finalP.className = 'card';
+      finalP.textContent = 'FELIZ CUMPLE SAPITA, TE LO DESEA SHAO';
+
+      videoWrapper.appendChild(rememberP);
+      videoWrapper.appendChild(video);
+      videoWrapper.appendChild(msgP);
+      videoWrapper.appendChild(finalP);
+      cardsContainer.appendChild(videoWrapper);
+
+      // Mostrar saludo final después de 5s
+      setTimeout(() => {
+        finalP.classList.add('show');
+      }, 5000);
+    }
   }
 }
 });
