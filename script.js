@@ -11,18 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const cardsContainer = document.getElementById('cardsContainer');
 
   // Mensajes para las cartas
-  const cardsTexts = [
-    '¡Que tus sueños se hagan realidad! 💫',
-    'Ríe, ama y disfruta cada momento 🥳',
-    'Hoy es tu día especial, ¡aprovéchalo! 🎁',
-    'Gracias por ser increíble 🙌',
-    '¡Brindemos por otro año lleno de aventuras! 🍾'
-  ];
+  // Mensajes para las cartas
+// Mensajes para las cartas
+// Mensajes para las cartas
+const cardsTexts = [
+  'Hola, MB ',
+  'En este día tan especial quiero dedicarte unas palabras desde el corazón:',
+  '¡Feliz cumpleaños! ',
+  'Que cada sueño que guardas en tu corazón encuentre el camino para hacerse realidad.',
+  'Nunca dejes de luchar por lo que deseas, ni permitas que las dificultades apaguen tu luz.',
+  'Si algún día te sientes triste, solo mira hacia atrás y recuerda todo lo que has logrado.',
+  'Porque cada logro —grande o pequeño— es una victoria que te ha traído hasta aquí.',
+  'Sigue avanzando, sigue triunfando, y conviértete en la mejor en lo que haces.',
+  'El mundo necesita esa fuerza y autenticidad que llevas dentro.',
+  '¡Brindemos por tu vida, por tu camino y por todo lo que aún está por venir! '
+];
+
+
+
 
   btn.addEventListener('click', () => {
     const name = input.value.trim();
     if (!name) {
-      alert('Por favor ingresa tu nombre 🙏');
+      alert('Por favor ingresa tu nombre ');
       return;
     }
 
@@ -53,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (percent === 75) {
         clearInterval(interval);
-        scanText.textContent = 'Es el nombre de una bandida 🤭';
+        scanText.textContent = 'Es el nombre de una bandida ';
         setTimeout(() => {
           resumeScan();
         }, 2000);
@@ -144,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.remove();
           index++;
           showNextCard();
-        }, 600); // esperar transición de salida
+        }, 400); // esperar transición de salida
       }, 5000);
     };
 
