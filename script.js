@@ -192,7 +192,7 @@ const cardsTexts = [
 
       const finalP = document.createElement('p');
       finalP.className = 'card';
-      finalP.textContent = 'FELIZ CUMPLE SAPITA, TE LO DESEA SHAO';
+      finalP.textContent = 'FELIZ CUMPLE SAPITA';
 
       videoWrapper.appendChild(rememberP);
       videoWrapper.appendChild(video);
